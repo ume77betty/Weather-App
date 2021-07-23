@@ -54,7 +54,7 @@ function App() {
       setLoading(true);
       let tempData = [];
       for (const order of city) {
-        const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${order}&units=${units}&lang=${lang}&appid=${PARAMS}`);
+        const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${order}&units=${units}&lang=${lang}&appid=${PARAMS}`);
         const data = await response.json();
         tempData.push(data);
       }
