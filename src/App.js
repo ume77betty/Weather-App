@@ -23,7 +23,7 @@ function App() {
       return;
     } else {
       setLoading(true);
-      const response = await fetch(`http://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=${units}&lang=${lang}&appid=${PARAMS}`);
+      const response = await fetch(`https://api.openweathermap.org/data/2.5/weather?q=${cityInput}&units=${units}&lang=${lang}&appid=${PARAMS}`);
       const newCityResponse = await response.json();
       if (newCityResponse.cod === '404') {
         setCityNotFound(true);
